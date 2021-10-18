@@ -1,4 +1,3 @@
-import { Message } from 'discord.js';
 import Client, { intents } from './Class';
 import config from './Config';
 

@@ -7,6 +7,7 @@ import moment from 'moment';
 const event: Event = {
     once: false,
     execute: async (client: Client, member: GuildMember) => {
+        if (!member.guild.me?.permissions.has("VIEW_AUDIT_LOG")) return console.log("봇에게 로그를 볼 권한이 없습니다.");
         let channel = member.guild.channels.cache.get(Config.logChannel);
         if (!channel || !channel.isText()) return console.log("로그채널이 삭제된듯 합니다.");
         const fetchedLogs = await member.guild.fetchAuditLogs({
