@@ -11,7 +11,7 @@ const event: Event = {
         if (!channel || !channel.isText()) return console.log("로그채널이 삭제된듯 합니다.");
         const fetchedLogs = await message.guild.fetchAuditLogs({
             limit: 1,
-            type: 'MESSAGE_DELETE',
+            type: 'MESSAGE_DELETE'
         });
         const auditLogs = fetchedLogs.entries.first();
         let embed = new MessageEmbed({
@@ -71,11 +71,10 @@ const event: Event = {
                     value: executor?.tag!,
                     inline: true
                 })
-        } else {
-            channel.send({
-                embeds: [embed], files: ["../bulkDeleteLogs.txt"]
-            });
-        };
+        }
+        channel.send({
+            embeds: [embed], files: ["../bulkDeleteLogs.txt"]
+        });
     }
 };
 

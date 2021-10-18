@@ -82,14 +82,10 @@ const event: Event = {
                     inline: true
                 }
             )
-            channel.send({
-                embeds: [embed], files: ["../bulkDeleteLogs.txt"]
-            });
-        } else {
-            channel.send({
-                embeds: [embed], files: ["../bulkDeleteLogs.txt"]
-            });
-        };
+        }
+        channel.send({
+            embeds: [embed], files: ["../bulkDeleteLogs.txt"]
+        });
     }
 };
 

@@ -7,6 +7,8 @@ const event: Event = {
     once: false,
     execute: (client: Client, oldMessage: Message | PartialMessage, newMessage: Message | PartialMessage) => {
         if (oldMessage.author?.bot) return;
+        let channel = oldMessage.guild?.channels.cache.get(Config.logChannel);
+        if (!channel || !channel?.isText()) return console.log("로그채널이 삭제된듯 합니다");
         let embed = new MessageEmbed({
             title: "메세지 수정 감지",
             author: {
@@ -62,8 +64,6 @@ const event: Event = {
                 name: i.name + " ||" + i.size + "byte(?)||", value: `파일 타입 : ${i.contentType}\n[프록시 다운 링크](${i.proxyURL})\n[다운 링크](${i.url})`, inline: false
             });
         });
-        let channel = oldMessage.guild?.channels.cache.get(Config.logChannel);
-        if (!channel || !channel?.isText()) return console.log("로그채널이 삭제된듯 합니다");
         channel?.send({ embeds: [embed] });
     }
 };

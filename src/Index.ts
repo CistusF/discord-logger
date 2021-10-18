@@ -7,6 +7,4 @@ const client = new Client({
     partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"]
 });
 
-// client.on("messageDeleteBulk")
-
 client.login(config.token);
