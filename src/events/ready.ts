@@ -1,7 +1,5 @@
 import { Event } from '../interface/Types';
 import Client from '../Class';
-import config from '../Config';
-import { REST } from '@discordjs/rest';
 
 const event: Event = {
     once: true,
