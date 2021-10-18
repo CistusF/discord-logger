@@ -5,13 +5,13 @@
   
 ### Features
   
-> Message Delete
-> Bulk Message Delete
-> Message Edit
-> Member guild join
-> Member guild leave
-> Member guild kicked
-> Member guild banned
+> Message Delete  
+> Bulk Message Delete  
+> Message Edit  
+> Member guild join  
+> Member guild leave  
+> Member guild kicked  
+> Member guild banned  
   
   
 ### Language
