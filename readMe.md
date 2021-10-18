@@ -12,6 +12,7 @@
 > Member guild leave  
 > Member guild kicked  
 > Member guild banned  
+> Member guild unban
   
   
 ### Language
